@@ -88,6 +88,7 @@ scrObject.encrypt(input).
 The result from `encrypt()`'s resolved Promise can be passed directly to a WebSocket, XMLHttpRequest, or other processor.
 
 To decrypt content:
+
 ```
 // *NOTE:* {scrObject} has the correct "tag" for the (encrypted) content
 scrObject.decrypt(output).
@@ -131,6 +132,7 @@ SCR.fromJWE(key, jwe).
 **NOTE:** The JSON representation **SHOULD NOT** be shared outside of running code.  It contains all the information necessary to decrypt content
 
 An SCR has the following members (presented as [JCR](https://tools.ietf.org/html/draft-newton-json-content-rules)):
+
 ```
 scr {
   "enc" : string,   ; Content Encryption Algorithm from [RFC7518]
