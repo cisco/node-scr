@@ -23,7 +23,7 @@
   "dependencies": {
     "es6-promise": "^2.0.1",
     "lodash.clone": "^3.0.2",
-    "node-jose": "git+https://github.com/cisco/node-jose.git#0.3.0"
+    "node-jose": "^0.3.0"
   },
   "devDependencies": {
     "browserify": "^8.1.3",
