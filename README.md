@@ -17,16 +17,22 @@ A JavaScript implementation of Secure Content Resource (SCR) for current web bro
 
 ## Installing ##
 
-To install the latest from the repository:
+To install the latest from [NPM](https://npmjs.com/):
+
+```
+  npm install node-scr
+```
+
+Or to install a specific release:
+
+```
+  npm install node-scr@0.2.0
+```
+
+Alternatively, the latest unpublished code can be installed directly from the repository:
 
 ```
   npm install git+ssh://git@github.com:cisco/node-scr.git
-```
-
-Or to install a specific release from the repository:
-
-```
-  npm install git+ssh://git@github.com:cisco/node-scr.git#0.2.0
 ```
 
 ## Basics ##
@@ -38,6 +44,8 @@ var SCR = require("node-scr");
 ```
 
 This library uses [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) for most operations.
+
+This library supports [Browserify](http://browserify.org/).  To use in a web browser, `require('node-kms')` and bundle with the rest of your app.
 
 The content to be encrypted or returned from being decrypted are [Buffer](https://nodejs.org/api/buffer.html) objects.
 
