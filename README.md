@@ -2,6 +2,8 @@
 
 A JavaScript implementation of Secure Content Resource (SCR) for current web browsers and node.js-based servers.  An SCR provides enough information to find and decrypt large protected content (e.g., shared file).
 
+[![NPM](https://nodei.co/npm/node-scr.png)](https://nodei.co/npm/node-scr/)
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <a name='toc'>

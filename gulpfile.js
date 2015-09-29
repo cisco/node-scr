@@ -29,7 +29,8 @@ var browserify = require("browserify"),
     karma = require("karma"),
     merge = require("lodash.merge"),
     mocha = require("gulp-mocha"),
-    runSequence = require("run-sequence");
+    runSequence = require("run-sequence"),
+    shell = require("gulp-shell");
 
 // ### 'CONSTANTS' ###
 var SOURCES = ["./lib/**/*.js", "!(./lib/old/**/*.js)"],
@@ -80,12 +81,16 @@ gulp.task("clean:dist", function() {
 
 // ### DOCUMENTATION TASKS ###
 gulp.task("doc:readme", function() {
-  gulp.src("./README.md").
-       pipe(doctoc({
-         title: "<a name='toc'>"
-       })).
-       pipe(gulp.dest("./"));
+  return gulp.src("./README.md").
+         pipe(doctoc({
+           title: "<a name='toc'>"
+         })).
+         pipe(gulp.dest("./"));
 });
+gulp.task("doc:js", shell.task([
+  "./node_modules/.bin/jsdoc --configure ./jsdoc.json"
+]));
+gulp.task("doc", ["doc:readme", "doc:js"]);
 
 // ### NODEJS TASKS ###
 function doTestsNodejs() {

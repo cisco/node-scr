@@ -1,0 +1,25 @@
+{
+  "source": {
+    "include": [ "README.md", "lib/index.js"]
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "templates": {
+    "default": {
+      "outputSourceFiles": false
+    },
+    "colapseSymbols": false,
+    "monospaceLinks": true,
+    "outputSourceFiles": false
+  },
+  "markdown": {
+    "parser": "gfm",
+    "hardwrap": true
+  },
+  "opts": {
+    "destination": "./dist/docs",
+    "encoding": "utf8",
+    "template": "./node_modules/minami"
+  }
+}
