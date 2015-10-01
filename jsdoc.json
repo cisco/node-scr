@@ -10,8 +10,11 @@
       "outputSourceFiles": false
     },
     "colapseSymbols": false,
+    "copyright": "Copyright © 2015 Cisco Systems, Inc.",
     "monospaceLinks": true,
-    "outputSourceFiles": false
+    "outputSourceFiles": false,
+    "syntaxTheme": "dark",
+    "theme": "simplex"
   },
   "markdown": {
     "parser": "gfm",
@@ -20,6 +23,6 @@
   "opts": {
     "destination": "./dist/docs",
     "encoding": "utf8",
-    "template": "./node_modules/minami"
+    "template": "./node_modules/ink-docstrap/template"
   }
 }
