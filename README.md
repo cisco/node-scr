@@ -45,7 +45,7 @@ var SCR = require("node-scr");
 
 This library uses [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) for most operations.
 
-This library supports [Browserify](http://browserify.org/).  To use in a web browser, `require('node-kms')` and bundle with the rest of your app.
+This library supports [Browserify](http://browserify.org/).  To use in a web browser, `require('node-scr')` and bundle with the rest of your app.
 
 The content to be encrypted or returned from being decrypted are [Buffer](https://nodejs.org/api/buffer.html) objects.
 
