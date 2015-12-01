@@ -1,0 +1,28 @@
+{
+  "source": {
+    "include": [ "README.md", "lib/index.js"]
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "templates": {
+    "default": {
+      "outputSourceFiles": false
+    },
+    "colapseSymbols": false,
+    "copyright": "Copyright © 2015 Cisco Systems, Inc.",
+    "monospaceLinks": true,
+    "outputSourceFiles": false,
+    "syntaxTheme": "dark",
+    "theme": "simplex"
+  },
+  "markdown": {
+    "parser": "gfm",
+    "hardwrap": true
+  },
+  "opts": {
+    "destination": "./dist/docs",
+    "encoding": "utf8",
+    "template": "./node_modules/ink-docstrap/template"
+  }
+}

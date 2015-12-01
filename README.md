@@ -20,19 +20,22 @@ A JavaScript implementation of Secure Content Resource (SCR) for current web bro
 To install the latest from [NPM](https://npmjs.com/):
 
 ```
-  npm install node-scr
+{@lang bash}
+npm install node-scr
 ```
 
 Or to install a specific release:
 
 ```
-  npm install node-scr@0.2.0
+{@lang bash}
+npm install node-scr@0.2.0
 ```
 
 Alternatively, the latest unpublished code can be installed directly from the repository:
 
 ```
-  npm install git+ssh://git@github.com:cisco/node-scr.git
+{@lang bash}
+npm install git+ssh://git@github.com:cisco/node-scr.git
 ```
 
 ## Basics ##
@@ -40,6 +43,7 @@ Alternatively, the latest unpublished code can be installed directly from the re
 Require the library as normal:
 
 ```
+{@lang javascript}
 var SCR = require("node-scr");
 ```
 
@@ -54,6 +58,7 @@ The content to be encrypted or returned from being decrypted are [Buffer](https:
 To create an empty SCR:
 
 ```
+{@lang javascript}
 var scrObject;
 SCR.create().
     then(function(result) {
@@ -81,6 +86,7 @@ The "loc" member is set by the API user, and the "tag" member is set by `scrObje
 To encrypt content:
 
 ```
+{@lang javascript}
 // {input} is one of:
 // -  a node.js Buffer
 // -  an ArrayBuffer
@@ -98,6 +104,7 @@ The result from `encrypt()`'s resolved Promise can be passed directly to a WebSo
 To decrypt content:
 
 ```
+{@lang javascript}
 // *NOTE:* {scrObject} has the correct "tag" for the (encrypted) content
 scrObject.decrypt(output).
     then(function(input) {
@@ -113,6 +120,7 @@ Encrypted JWEs are appropriate to be shared with recipients.
 To export the SCR as a JWE:
 
 ```
+{@lang javascript}
 var jwe;
 // {key} is a JWK from 'node-jose', or the JSON representation of a JWK
 scrObject.toJWE(key).
@@ -125,6 +133,7 @@ scrObject.toJWE(key).
 To import the SCR from a JWE:
 
 ```
+{@lang javascript}
 var scrObject;
 // {key} is a JWK from 'node-jose', or the JSON representation of a JWK
 // {jwe} is a JWE using any of the serializations (Compact, JSON Flattened, JSON General)
@@ -160,6 +169,7 @@ The "loc" and "tag" members are optional:
 A complete example of an SCR as JSON:
 
 ```
+{@lang javascript}
 {
   "enc": "A256GCM",
   "key": "Ce3pe4stGd3tvZdSR3ekIoNjF3Q3V6R0oMN4SSGKbyI",
@@ -173,12 +183,14 @@ A complete example of an SCR as JSON:
 To export an SCR to a JSON object:
 
 ```
+{@lang javascript}
 var output = scrObject.toJSON();
 ```
 
 To import an SCR from a JSON object:
 
 ```
+{@lang javascript}
 var scrObject;
 // {input} is a JSON representation
 SCR.create(input).
