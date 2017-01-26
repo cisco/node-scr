@@ -1,5 +1,7 @@
 # node-scr #
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/cisco/node-scr.svg)](https://greenkeeper.io/)
+
 A JavaScript implementation of Secure Content Resource (SCR) for current web browsers and node.js-based servers.  An SCR provides enough information to find and decrypt large protected content (e.g., shared file).
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
