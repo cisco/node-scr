@@ -1,5 +1,12 @@
 # Release Notes #
 
+<a name="0.3.0"></a>
+## [0.3.0](https://github.com/cisco/node-scr/compare/0.2.2...0.3.0) (2020-10-21)
+
+### Dependencies
+
+* upgrade `node-jose` to latest ([f3566a9af5cd92179503d357fa12ddf3ca6df22c](https://github.com/cisco/node-scr/commit/f3566a9af5cd92179503d357fa12ddf3ca6df22c))
+
 <a name="0.2.2"></a>
 ## [0.2.2](https://github.com/cisco/node-scr/compare/0.2.1...0.2.2) (2016-08-23)
 
